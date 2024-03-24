@@ -7,7 +7,7 @@ db = client['pornhub']
 collection = db['csrapping']
 linkaddr = 'https://www.pornhub.com'
 
-def halaman1(porns):
+async def halaman1(porns):
     pornsstar = req.get(porns)
     extract = bs4(pornsstar.content, 'html.parser')
     hasil = extract.find_all("a", {"class": "gtm-event-thumb-click"})
